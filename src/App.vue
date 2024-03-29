@@ -1,19 +1,19 @@
 <template>
 	<div class="app">
-	  <header>
-		<h1>The<strong>Anime</strong>Verse</h1>
-		<form class="search-box" @submit.prevent="HandleSearch">
+	  <header class="pt-12 pb-12">
+		<h1 class="text-color-one text-5xl font-bold text-center uppercase mb-10">The<strong class="text-color-two">Anime</strong>Verse</h1>
+		<form class="flex justify-center px-7" @submit.prevent="HandleSearch">
 		  <input
 			type="search"
-			class="search-field"
 			placeholder="Search for an anime...."
+			class="rounded-full bg-violet-100 text-xl border-2 border-purple-500 p-4 placeholder-purple-400 focus:text-violet-950 focus:border-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 py-3 px-4 block w-full max-w-2xl"
 			required
 			v-model="search_query"
 		  />
 		</form>
 	  </header>
-	  <main>
-		<div class="cards">
+	  <main class="max-w-1200 mx-auto px-6">
+		<div class="flex flex-wrap mx-[-8px]">
 		  <CardList 
 			v-for="anime in animeList" 
 			:key="anime.mal_id"
@@ -74,67 +74,5 @@
   a {
 	text-decoration: none;
   }
-  h1 {
-	color: #057dcd;
-	font-size: 42px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-bottom: 40px;
-  }
-  
-  .search-box {
-	display: flex;
-	justify-content: center;
-	padding-left: 30px;
-	padding-right: 30px;
-  }
-  strong {
-	color: #43b0f1;
-  }
-  header {
-	padding-top: 50px;
-	padding-bottom: 50px;
-  }
-  input:focus{
-	color: #fff;
-	background-color: #003f5c;
-	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
-  }
-  input:valid{
-	color: #fff;
-	background-color: #003f5c;
-	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
-  
-  }
-  .placeholder {
-	color: #aaa;
-  }
-  .search-field {
-	appearance: none;
-	background: none;
-	border: none;
-	outline: none;
-	background-color: #f3f3f3;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-	display: block;
-	width: 100%;
-	max-width: 600px;
-	padding: 15px;
-	border-radius: 8px;
-	color: #03045e;
-	font-size: 20px;
-	transition: 0.4s;
-  }
-  main {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding-left: 30px;
-	padding-right: 30px;
-  }
-  
-  .cards {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 -8px;
-  }
+ 
   </style>
