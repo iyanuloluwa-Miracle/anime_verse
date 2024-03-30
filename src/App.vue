@@ -6,7 +6,7 @@
 		  <input
 			type="search"
 			placeholder="Search for an anime...."
-			class="rounded-full bg-violet-100 text-xl border-2 border-purple-500 p-4 placeholder-purple-400 focus:text-violet-950 focus:border-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 py-3 px-4 block w-full max-w-2xl"
+			class="rounded-full bg-bgcolor-two text-xl border-2 border-color-one p-4 placeholder-color-six focus:text-bgcolor-one focus:border-color-two focus:outline-none focus:ring-2 focus:ring-color-one py-3 px-4 block w-full max-w-2xl"
 			required
 			v-model="search_query"
 		  />
